@@ -14,6 +14,7 @@ export default {
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                helvetica: ['HelveticaNeueItalic','sans-serif']
             },
             minWidth: {
                 '1': '.25rem',
@@ -127,6 +128,10 @@ export default {
                 '4/5': '80vh',
                 '9/10': '90vh',
             },
+            colors:{
+                'beige':'#F7EEE9',
+                'darkorange':'#A2735F',
+            }
         },
     },
 
