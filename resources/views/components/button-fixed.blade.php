@@ -1,5 +1,5 @@
 @props(['href'=> '#','title'=>'Chat Now'])
-<div class="fixed bottom-48 right-16 ">
+<div class="fixed bottom-48 right-16 z-50 ">
 <a href="{{ $href }}" class="flex ltr:flex-row rtl:flex-row-reverse items-center gap-2 bg-darkorange rounded-full font-helvetica text-white py-3 px-4 shadow-2xl">
     <span class="fill-current text-darkorange bg-white border border-white rounded-full w-8 h-8">
         <x-easyadmin::display.icon icon="icons.whatsapp_icon" height="h-7" width="w-7"/>

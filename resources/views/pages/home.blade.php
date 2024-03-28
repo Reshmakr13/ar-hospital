@@ -39,10 +39,16 @@
     <div class="mt-8 ml-8">
         <x-button-fixed />
     </div>
-
+    <div class="">
+        <x-sub-black />
+    </div>
+    <div class="">
+        <x-sub-white />
+    </div>
     <div class="">
         <x-ready-component />
     </div>
+    
 
     <div class=>
         <x-footer-component />

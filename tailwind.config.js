@@ -131,6 +131,8 @@ export default {
             colors:{
                 'beige':'#F7EEE9',
                 'darkorange':'#A2735F',
+                'customOrange':'#8F7143',
+                'darkbeige':'#d7ab92 ',
             }
         },
     },

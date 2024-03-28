@@ -1,10 +1,10 @@
 @props(['title','content','src'=>'/images/dep2.jpg'])
-<div class="flex flex-row md:flex-row border border-beige  bg-beige  rounded-3xl lg:w-1/2  ">
-    <div class="w-1/2  ml-6 mr-6">
-        <p class="text-4xl font-helvetica mt-8 text-left">{{ $title }}</p>
-        <p class="text-base font-thin  font-helvetica text-left mt-6 mb-6 ">{{ $content }}</p>
+<div class="flex flex-row  items-center   bg-beige  rounded-3xl   ">
+    <div class="w-1/2  flex flex-col items-center">
+        <p class="text-4xl font-helvetica mt-8 ltr:text-left rtl:text-right w-3/4">{{ $title }}</p>
+        <p class="text-sm font-thin  font-helvetica ltr:text-left rtl:text-right mt-6 w-3/4 ">{{ $content }}</p>
     </div>
     <div class="w-1/2  ">
-        <img src="{{$src}}" class="border border-transparent w-full h-48 md:h-full rounded-tr-xl rounded-br-xl " alt="">
+        <img src="{{$src}}" class="object-cover w-full h-48 md:h-full ltr:rounded-tr-3xl ltr:rounded-br-3xl rtl:rounded-tl-3xl rtl:rounded-bl-3xl " alt="">
     </div>
 </div>

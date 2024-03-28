@@ -1,4 +1,4 @@
-<div class="bg-black/80">
+<div class="bg-black/95">
 <div class= "flex flex-col lg:flex-row ">
     <div class="lg:w-1/3 pt-16 ltr:ml-16 rtl:mr-16 flex flex-col justify-start gap-y-8 ">
         <div class="rounded-full bg-white flex justify-center p-2 w-52 ">
