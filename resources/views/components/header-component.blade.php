@@ -11,9 +11,9 @@
         </button>
             <ul class="flex flex-col text-center gap-y-4 mt-8 mb-8">
                 <div class="flex flex-row justify-center gap-2">
-                    <li><button @click="direction === 'rtl' ? direction = 'ltr' " class="text-sm sm:text-base text-gray-700 hover:text-pink-400 focus:text-pink-700 cursor-pointer ">English</button></li>
+                    <li><button @click="direction === 'rtl' ? 'rtl':'ltr' " class="text-sm sm:text-base text-gray-700 hover:text-pink-400 focus:text-pink-700 cursor-pointer ">English</button></li>
                     <span class="inline-block">|</span>
-                    <li><button @click="direction === 'ltr' ? direction = 'rtl' " class="text-sm sm:text-base text-gray-700  hover:text-pink-400 focus:text-pink-700 cursor-pointer">Arabic</button></li>
+                    <li><button @click="direction === 'ltr' ?  'ltr':'rtl' " class="text-sm sm:text-base text-gray-700  hover:text-pink-400 focus:text-pink-700 cursor-pointer">Arabic</button></li>
                 </div>
                 
                 <li><a class="text-gray-700   text-sm sm:text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">Home</a></li>

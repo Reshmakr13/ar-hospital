@@ -24,8 +24,9 @@
                 <div class="flex justify-center lg:w-1/2">
                     <img src="/images/image9.png" class="w-96 lg:w-full rounded-2xl" alt="doctor_image">
                 </div>
+                <x-button-fixed />
             </div>
-            <x-button-fixed />
+            
 
             <div class="max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto text-center mt-6">
                 <p class="text-3xl lg:text-5xl font-semi-bold ">Comprehensive Healthcare<br> Departments</p>
