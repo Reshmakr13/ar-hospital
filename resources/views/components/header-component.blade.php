@@ -11,9 +11,9 @@
         </button>
             <ul class="flex flex-col text-center gap-y-4 mt-8 mb-8">
                 <div class="flex flex-row justify-center gap-2">
-                    <li><button @click="direction === 'rtl' ? 'rtl':'ltr' " class="text-sm sm:text-base text-gray-700 hover:text-pink-400 focus:text-pink-700 cursor-pointer ">English</button></li>
+                    <li><button @click="direction = 'ltr'" class="text-sm sm:text-base text-gray-700 hover:text-pink-400 cursor-pointer " :class="{' text-pink-700':direction === 'ltr'}">English</button></li>
                     <span class="inline-block">|</span>
-                    <li><button @click="direction === 'ltr' ?  'ltr':'rtl' " class="text-sm sm:text-base text-gray-700  hover:text-pink-400 focus:text-pink-700 cursor-pointer">Arabic</button></li>
+                    <li><button  @click="direction = 'rtl'" class="text-sm sm:text-base text-gray-700  hover:text-pink-400 cursor-pointer"  :class="{' text-pink-700':direction ==='rtl'}">Arabic</button></li>
                 </div>
                 
                 <li><a class="text-gray-700   text-sm sm:text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">Home</a></li>
@@ -84,9 +84,9 @@
     </div>
     <div class="hidden lg:flex w-h/6">
         <ul class="flex flex-row text-center gap-3 xl:gap-x-6">
-            <li><a class="lg:text-sm xl:text-base ltr:font-semibold text-gray-700  hover:text-pink-400 ltr:text-pink-700 cursor-pointer">English</a></li>
+            <li><button @click="direction = 'ltr'" class="lg:text-sm xl:text-base ltr:font-semibold text-gray-700  hover:text-pink-400 ltr:text-pink-700 cursor-pointer">English</li>
             <span class="inline-block">|</span>
-            <li><a class="lg:text-sm xl:text-base rtl:font-semibold text-gray-700  hover:text-pink-400 rtl:text-pink-700 cursor-pointer ">Arabic</a></li>
+            <li><button @click="direction = 'rtl'" class="lg:text-sm xl:text-base rtl:font-semibold text-gray-700  hover:text-pink-400 rtl:text-pink-700 cursor-pointer ">Arabic</li>
             
             <li><a class="text-gray-700  lg:text-sm xl:text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">About</a></li>
             <li x-data="{open : false}"  @mouseleave="open = false" >

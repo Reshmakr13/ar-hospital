@@ -20,6 +20,9 @@ use Modules\Ynotz\AppSettings\Http\Controllers\AppSettingsController;
 Route::get('/', function () {
     return view('pages.index');
 });
+Route::get('/doctorinfo', function () {
+    return view('pages.doctorinfo');
+});
 Route::get('/home', function () {
     return view('pages.home');
 });

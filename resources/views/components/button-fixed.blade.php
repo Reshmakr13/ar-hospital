@@ -1,5 +1,5 @@
 @props(['href'=> '#','title'=>'Chat Now'])
-<div class="fixed z-50   bottom-24 w-full ">
+<div class="fixed z-50   bottom-16 w-full ">
     <div class=" max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-4xl xl:max-w-6xl  bg-blue">
         <div class="flex  justify-end  ">
             <a href="{{ $href }}" class="flex ltr:flex-row rtl:flex-row-reverse items-center gap-2 bg-darkorange rounded-full font-helvetica text-white py-3 px-4 shadow-2xl shadow-white/30">
