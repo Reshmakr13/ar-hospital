@@ -8,15 +8,15 @@
     @stack('css')
     @stack('header_js')
 </head>
-<body class="max-w-screen-xl mx-auto font-helvetica bg-white">
+<body class="max-w-screen-xl mx-auto font-helvetica bg-white lg:text-base xl:text-lg">
     <div>
         <x-header-component />
         <div class="">
-            <div class="max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto mt-16 flex flex-col lg:flex-row lg:gap-x-6  gap-y-6 ltr:text-left rtl:text-right  ">
-                <div class="flex flex-col gap-y-6 xl:gap-10  lg:w-1/2">
-                    <p class="text-xs text-darkorange bg-beige text-center rounded-xl p-2 w-40">Harness Your Well-being</p>
-                    <p class="text-3xl sm:text-4xl md:text-5xl xl:text-6xl">We provide<br><span class="text-customOrange">Integrated World<br>Class Patient Service<span></p>
-                    <p class="text-sm sm:text-base">All the Lorem Ipsum generators on the Internet tend to repeat
+            <div class="max-w-9/10  mx-auto mt-16 flex flex-col lg:flex-row lg:gap-x-6  gap-y-6 ltr:text-left rtl:text-right  ">
+                <div class="flex flex-col gap-y-6 xl:gap-6  lg:w-1/2 justify-center">
+                    <p class="text-sm text-darkorange bg-beige text-center rounded-full px-2 py-1 w-44">Harness Your Well-being</p>
+                    <p class="text-3xl sm:text-4xl md:text-6xl xl:text-7xl">We provide<br><span class="text-customOrange">Integrated World<br>Class Patient Service<span></p>
+                    <p class="text-sm sm:text-base md:text-lg">All the Lorem Ipsum generators on the Internet tend to repeat
                         predefined chunks as necessary,making this the first true generator.</p>
                     <span class="lg:mt-6"><x-button-component /></span>
                 </div>
@@ -28,7 +28,7 @@
             </div>
             
 
-            <div class="max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto text-center mt-6">
+            <div class="max-w-9/10  mx-auto text-center mt-6">
                 <p class="text-3xl lg:text-5xl font-semi-bold ">Comprehensive Healthcare<br> Departments</p>
                 <div class="flex flex-col gap-y-6 lg:gap-y-4 xl:gap-y-8 mt-6">
                     <div class="flex flex-col justify-center gap-y-6 lg:flex-row lg:gap-x-4  xl:justify-between">
@@ -46,35 +46,35 @@
                     
                 </div>
             </div>
-            <div class="mt-6 max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto">
+            <div class="mt-6 max-w-9/10  mx-auto">
             <x-sub-white /> 
             </div>
             <div class=" bg-black/95 flex flex-col items-center ">
-                <div class="lg:hidden max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto flex flex-col gap-y-6 mt-6">
+                <div class="lg:hidden max-w-9/10  mx-auto flex flex-col gap-y-6 mt-6">
+                    <x-blog-card :title="'Our Value'" :content="'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makelec'" />
                     <x-blog-card :title="'Our Mission'" :content="'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makelec'" />
-                    <x-blog-card :title="'Our Mission'" :content="'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makelec'" />
-                    <x-blog-card :title="'Our Mission'" :content="'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makelec'" />
+                    <x-blog-card :title="'Our vision'" :content="'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makelec'" />
                 </div>
-                <div class="max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto hidden lg:flex flex-row lg:gap-2 xl:gap-4 mt-32 -mb-32 ">
-                    <div class="w-1/2">
-                    <x-blog-big :title="'Our Mission'" :content="'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makelec'" />
+                <div class="max-w-9/10  mx-auto hidden lg:flex flex-row lg:gap-2 xl:gap-4 py-20 items-stretch">
+                    <div class="w-1/2 flex h-full">
+                    <x-blog-big :title="'Our Value'" :content="'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makelec'" />
                     </div>
-                    <div class="w-1/2 flex flex-col  lg:gap-2 xl:gap-4">
+                    <div class="w-1/2 flex flex-col  lg:gap-3   ">
                     <x-blogcard-bigsc  :title="'Our Mission'" :content="'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makelec'" />
-                    <x-blogcard-bigsc  :title="'Our Mission'" :content="'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makelec'" />
+                    <x-blogcard-bigsc  :title="'Our Vision'" :content="'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to makelec'" />
                     </div>
                 </div>
             </div>
             <div class="bg-black/95 ">
-                <div class="max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto">
+                <div class="max-w-9/10  mx-auto">
                 <x-sub-black />
                 </div>
             
             </div>
-            <div class="max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto mt-6">
+            <div class=" mt-10 xl:mt-16 max-w-9/10  mx-auto">
                 <x-blog-component/>
             </div>
-            <div class="max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto mt-6">
+            <div class="max-w-9/10  mx-auto mt-6">
                 <x-ready-component />
             </div>
             <div class="mt-10">
