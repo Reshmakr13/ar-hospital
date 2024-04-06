@@ -16,9 +16,9 @@
                     <li><button  @click="direction = 'rtl'" class="text-base text-gray-700  hover:text-pink-400 cursor-pointer"  :class="{' text-pink-700':direction ==='rtl'}">Arabic</button></li>
                 </div> -->
                 
-                <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.home')}}</a></li>
+                <!-- <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.home')}}</a></li> -->
                 <li><a href="{{route('webpages.guest.show', ['locale' => app()->currentLocale(), 'slug' => 'about'])}}" 
-                    @click.prevent.stop="$dispatch('linkaction', {link: '{{route('webpages.guest.show', ['locale' => app()->currentLocale(), 'slug' => 'about'])}}', route: 'webpages.guest.show'})"
+                        @click.prevent.stop="$dispatch('linkaction', {link: '{{route('webpages.guest.show', ['locale' => app()->currentLocale(), 'slug' => 'about'])}}', route: 'webpages.guest.show'})"
                         class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.about')}}</a></li>
                 
                 <li  x-data="{open : false}" class="flex flex-col  justify-center ">
@@ -89,7 +89,7 @@
                                     @click.prevent.stop="$dispatch('linkaction', {link: '{{route('facilities.guest.show', ['locale' => app()->currentLocale(), 'slug' => '24x7-emergency-medicine-and-critical-care'])}}'})" 
                                     class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.24×7_emergency_medicine_and_critical_care')}}</a></li>
 
-                        <li><a href="{{route('departments.guest.show', ['locale' => app()->currentLocale(), 'slug' => '24x7-cardiac-care'])}}"
+                        <li><a href="{{route('facilities.guest.show', ['locale' => app()->currentLocale(), 'slug' => '24x7-cardiac-care'])}}"
                                     @click.prevent.stop="$dispatch('linkaction', {link: '{{route('facilities.guest.show', ['locale' => app()->currentLocale(), 'slug' => '24x7-cardiac-care'])}}'})" 
                                     class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.24×7_cardiac_care')}}</a></li>
 
@@ -155,7 +155,8 @@
                 <li><a href="{{route('contact.guest.show', ['locale' => app()->currentLocale(), 'slug' => 'contacts'])}}" @click.prevent.stop="$dispatch('linkaction', {link: '{{route('contact.guest.show', ['locale' => app()->currentLocale(), 'slug' => 'contacts'])}}', route: 'webpages.guest.show'})" 
                 class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.contact')}}</a></li>
                 
-                <li><a class="bg-darkorange text-white rounded-full font-helvetica text-base py-3 px-4 shadow-2xl cursor-pointer transition-all duration-700 ease-in-out hover:bg-black">{{ __('header.schedule_an_appointment')}}</a></li>
+                <li><a href="{{route('booking.guest.show', ['locale' => app()->currentLocale()])}}" @click.prevent.stop="$dispatch('linkaction', {link: '{{route('booking.guest.show', ['locale' => app()->currentLocale()])}}', route: 'booking.guest.show'})"
+                        class="bg-darkorange text-white rounded-full font-helvetica text-base py-3 px-4 shadow-2xl cursor-pointer transition-all duration-700 ease-in-out hover:bg-black">{{ __('header.schedule_an_appointment')}}</a></li>
             </ul>
         </div>
     </div>
@@ -176,6 +177,7 @@
                         <li><a href="{{route('departments.guest.show', ['locale' => app()->currentLocale(), 'slug' => 'emergency-medicine-and-critical-care'])}}"
                                     @click.prevent.stop="$dispatch('linkaction', {link: '{{route('departments.guest.show', ['locale' => app()->currentLocale(), 'slug' => 'emergency-medicine-and-critical-care'])}}'})"
                                     class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer  ">{{ __('header.emergency_medicine_and_critical_care')}}</a></li>
+                        
                         <li><a href="{{route('departments.guest.show', ['locale' => app()->currentLocale(), 'slug' => 'orthopaedics-and-trauma-surgery'])}}"
                                     @click.prevent.stop="$dispatch('linkaction', {link: '{{route('departments.guest.show', ['locale' => app()->currentLocale(), 'slug' => 'orthopaedics-and-trauma-surgery'])}}'})"
                                 class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer  ">{{ __('header.orthopaedics_and_trauma_surgery')}}</a></li>
@@ -289,9 +291,15 @@
                 </div>
 
             </li>
-            <li><a class="text-gray-700   lg:text-base xl:text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.career')}}</a></li>
-            <li><a class="text-gray-700   lg:text-base xl:text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.contact')}}</a></li>
-            <li><a class="bg-darkorange hover:bg-black  text-white rounded-full font-helvetica lg:text-base xl:text-base  py-3 px-4 shadow-2xl transition-all duration-700 ease-in-out cursor-pointer">{{ __('header.schedule_an_appointment')}}</a></li> 
+            <li><a href="{{route('webpages.guest.show', ['locale' => app()->currentLocale(), 'slug' => 'careers'])}}" 
+                    @click.prevent.stop="$dispatch('linkaction', {link: '{{route('webpages.guest.show', ['locale' => app()->currentLocale(), 'slug' => 'careers'])}}', route: 'webpages.guest.show'})"
+                    class="text-gray-700   lg:text-base xl:text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.career')}}</a></li>
+            
+            <li><a href="{{route('contact.guest.show', ['locale' => app()->currentLocale(), 'slug' => 'contacts'])}}" @click.prevent.stop="$dispatch('linkaction', {link: '{{route('contact.guest.show', ['locale' => app()->currentLocale(), 'slug' => 'contacts'])}}', route: 'contact.guest.show'})" 
+                    class="text-gray-700   lg:text-base xl:text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.contact')}}</a></li>
+            
+            <li><a href="{{route(booking.guest.show', ['locale' => app()->currentLocale()])}}" @click.prevent.stop="$dispatch('linkaction', {link: '{{route('booking.guest.show', ['locale' => app()->currentLocale())}}', route: 'booking.guest.show'})" 
+                    class="bg-darkorange hover:bg-black  text-white rounded-full font-helvetica lg:text-base xl:text-base  py-3 px-4 shadow-2xl transition-all duration-700 ease-in-out cursor-pointer">{{ __('header.schedule_an_appointment')}}</a></li> 
         </ul>
 
     </div>
