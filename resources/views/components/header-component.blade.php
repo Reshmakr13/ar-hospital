@@ -16,27 +16,27 @@
                     <li><button  @click="direction = 'rtl'" class="text-base text-gray-700  hover:text-pink-400 cursor-pointer"  :class="{' text-pink-700':direction ==='rtl'}">Arabic</button></li>
                 </div> -->
                 
-                <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">Home</a></li>
-                <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">About</a></li>
+                <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.home')}}</a></li>
+                <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.about')}}</a></li>
                 <li  x-data="{open : false}" class="flex flex-col  justify-center ">
                     <button @click="open = !open" class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange flex flex-row justify-center gap-1 cursor-pointer">
-                       <p>Departments</p>
+                       <p>{{ __('header.departments')}}</p>
                        <x-easyadmin::display.icon icon="icons.chevron_down" height="h-5" width="w-5"/>
                     </button>
                     
                     <div x-show="open" class="w-60 h-fit bg-white flex flex-col mx-auto  rounded-lg " x-on:click.outside="open = false">
                     <ul class=" p-6 flex flex-col gap-2 ltr:text-left rtl:text-right   ">
-                        <li><a class="text-gray-700 sm:text-base  text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer   ">Emergency Medicine And Critical Care</a></li>
-                        <li><a class="text-gray-700 sm:text-base  text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer   ">Orthopaedics And Trauma Surgery</a></li>
-                        <li><a class="text-gray-700 sm:text-base  text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer   ">Physiotherapy</a></li>
-                        <li><a class="text-gray-700 sm:text-base  text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer   ">Neurology</a></li>
-                        <li><a class="text-gray-700 sm:text-base  text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer   ">Cardiology</a></li>
-                        <li><a class="text-gray-700 sm:text-base  text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer   ">Urology</a></li>
-                        <li><a class="text-gray-700 sm:text-base  text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer   ">ENT</a></li>
-                        <li><a class="text-gray-700 sm:text-base  text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer   ">Dermatology & Cosmetology</a></li>
-                        <li><a class="text-gray-700 sm:text-base  text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer   ">Pediatrics & Pediatric Surgery</a></li>
-                        <li><a class="text-gray-700 sm:text-base  text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer   ">Clinical psychology</a></li>
-                        <li><a class="text-gray-700 sm:text-base  text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer   ">Craniofacial Surgery</a></li>
+                        <li><a class="text-gray-700 sm:text-base  text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer   ">{{ __('header.emergency_medicine_and_critical_care')}}</a></li>
+                        <li><a class="text-gray-700 sm:text-base  text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer   ">{{ __('header.orthopaedics_and_trauma_surgery')}}</a></li>
+                        <li><a class="text-gray-700 sm:text-base  text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer   ">{{ __('header.physiotherapy')}}</a></li>
+                        <li><a class="text-gray-700 sm:text-base  text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer   ">{{ __('header.neurology')}}</a></li>
+                        <li><a class="text-gray-700 sm:text-base  text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer   ">{{ __('header.cardiology')}}</a></li>
+                        <li><a class="text-gray-700 sm:text-base  text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer   ">{{ __('header.urology')}}</a></li>
+                        <li><a class="text-gray-700 sm:text-base  text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer   ">{{ __('header.ent')}}</a></li>
+                        <li><a class="text-gray-700 sm:text-base  text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer   ">{{ __('header.dermatology_&_cosmetology')}}</a></li>
+                        <li><a class="text-gray-700 sm:text-base  text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer   ">{{ __('header.pediatrics_&_pediatric_surgery')}}</a></li>
+                        <li><a class="text-gray-700 sm:text-base  text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer   ">{{ __('header.clinical_psychology')}}</a></li>
+                        <li><a class="text-gray-700 sm:text-base  text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer   ">{{ __('header.craniofacial_surgery')}}</a></li>
                     </ul>
                     </div>
                 
@@ -44,41 +44,41 @@
 
                 </li>
                 <li x-data="{open : false}" class="flex flex-col  justify-center ">
-                    <button @click="open = !open" class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange flex flex-row justify-center gap-1 cursor-pointer">
-                        <p>Facilities</p>
+                    <button @click="open = !open" class="text-gray-700 flex flex-row justify-center gap-1  text-base transition-all duration-300 ease-in-out hover:text-darkorange  cursor-pointer">
+                        <p>{{ __('header.facilities')}}</p>
                         <x-easyadmin::display.icon icon="icons.chevron_down" height="h-5" width="w-5"/>
                     </button>
                     <div x-show="open" class="w-60 h-fit bg-white flex flex-col mx-auto  rounded-lg " x-on:click.outside="open = false">
                     <ul class=" p-6 flex flex-col gap-2 ltr:text-left rtl:text-right    ">
-                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">24×7 Emergency Medicine And Critical Care</a></li>
-                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">24×7 Cardiac Care</a></li>
-                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">Delivery Packages</a></li>
-                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">Health Check-up Packages</a></li>
-                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">Health Insurance</a></li>
-                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">NICU</a></li>
-                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">SICU</a></li>
-                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">MICU</a></li>
-                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">CCU</a></li>
-                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">Other Facilities</a></li> 
+                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.24×7_emergency_medicine_and_critical_care')}}</a></li>
+                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.24×7_cardiac_care')}}</a></li>
+                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.delivery_packages')}}</a></li>
+                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.health_check-up_packages')}}</a></li>
+                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.health_insurance')}}</a></li>
+                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.nicu')}}</a></li>
+                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.sicu')}}</a></li>
+                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.micu')}}</a></li>
+                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.ccu')}}</a></li>
+                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.other_facilities')}}</a></li> 
                     </ul> 
                     </div>
                 </li>
-                <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer">Doctors</a></li>
+                <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer">{{ __('header.doctors')}}</a></li>
                 <li x-data="{open : false}" class="flex flex-col  justify-center ">
                     <button @click="open = !open" class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange flex flex-row justify-center gap-1 cursor-pointer">
-                        <p>Media</p>
+                        <p>{{ __('header.media')}}</p>
                         <x-easyadmin::display.icon icon="icons.chevron_down" height="h-5" width="w-5"/>
                     </button>
                     <div x-show="open" class="w-60 h-fit bg-white flex flex-col mx-auto  rounded-lg " x-on:click.outside="open = false">
                         <ul class=" p-6 flex flex-col gap-2 ltr:text-left rtl:text-right  ">
-                            <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">Our Photos</a></li>
-                            <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">Our Videos</a></li>
+                            <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.our_photos')}}</a></li>
+                            <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.our_videos')}}</a></li>
                         </ul>
                     </div>
                 </li>
-                <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">Career</a></li>
-                <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">Contact</a></li>
-                <li><a class="bg-darkorange hover:bg-black hover:transition-all duration-300 ease-in-out  text-white rounded-full font-helvetica text-base  py-3 px-4 shadow-2xl cursor-pointer">Schedule an appointment</a></li>
+                <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.career')}}</a></li>
+                <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.contact')}}</a></li>
+                <li><a class="bg-darkorange text-white rounded-full font-helvetica text-base py-3 px-4 shadow-2xl cursor-pointer transition-all duration-700 ease-in-out hover:bg-black">{{ __('header.schedule_an_appointment')}}</a></li>
             </ul>
         </div>
     </div>
@@ -88,25 +88,25 @@
             <!-- <span class="inline-block">|</span> -->
             <!-- <li><button @click="direction = 'rtl'" class="lg:text-base xl:text-base rtl:font-semibold text-gray-700  hover:text-pink-400 rtl:text-pink-700 cursor-pointer ">Arabic</li> -->
             
-            <li><a class="text-gray-700  lg:text-base xl:text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">About</a></li>
+            <li><a class="text-gray-700  lg:text-base xl:text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.about')}}</a></li>
             <li x-data="{open : false}"  @mouseleave="open = false" >
                 <button @mouseover="open = true" class="text-gray-700   lg:text-base xl:text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer flex flex-row items-center">
-                    <p>Departments</p>
+                    <p>{{ __('header.departments')}}</p>
                     <x-easyadmin::display.icon icon="icons.chevron_down" height="h-5" width="w-5"/>
                 </button>
                 <div x-show="open" class="absolute h-fit bg-white  border-t-2 border-darkorange  shadow-xl z-20 w-60 ">
                     <ul class=" p-6 flex flex-col gap-3 ltr:text-left rtl:text-right">
-                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer  ">Emergency Medicine And Critical Care</a></li>
-                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer  ">Orthopaedics And Trauma Surgery</a></li>
-                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer  ">Physiotherapy</a></li>
-                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer  ">Neurology</a></li>
-                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer  ">Cardiology</a></li>
-                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer  ">Urology</a></li>
-                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer  ">ENT</a></li>
-                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer  ">Dermatology & Cosmetology</a></li>
-                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer  ">Pediatrics & Pediatric Surgery</a></li>
-                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer  ">Clinical psychology</a></li>
-                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer  ">Craniofacial Surgery</a></li>
+                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer  ">{{ __('header.emergency_medicine_and_critical_care')}}</a></li>
+                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer  ">{{ __('header.orthopaedics_and_trauma_surgery')}}</a></li>
+                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer  ">{{ __('header.physiotherapy')}}</a></li>
+                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer  ">{{ __('header.neurology')}}</a></li>
+                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer  ">{{ __('header.cardiology')}}</a></li>
+                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer  ">{{ __('header.urology')}}</a></li>
+                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer  ">{{ __('header.ent')}}</a></li>
+                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer  ">{{ __('header.dermatology_&_cosmetology')}}</a></li>
+                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer  ">{{ __('header.pediatrics_&_pediatric_surgery')}}</a></li>
+                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer  ">{{ __('header.clinical_psychology')}}</a></li>
+                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer  ">{{ __('header.craniofacial_surgery')}}</a></li>
                     </ul>
                 </div>
             </li>
@@ -117,36 +117,36 @@
                 </button>
                 <div x-show="open" class="absolute h-fit bg-white  border-t-2 border-darkorange  shadow-xl z-20 w-60">
                     <ul class="text-left p-6 flex flex-col gap-3 ltr:text-left rtl:text-right">
-                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">24×7 Emergency Medicine And Critical Care</a></li>
-                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">24×7 Cardiac Care</a></li>
-                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">Delivery Packages</a></li>
-                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">Health Check-up Packages</a></li>
-                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">Health Insurance</a></li>
-                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">NICU</a></li>
-                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">SICU</a></li>
-                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">MICU</a></li>
-                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">CCU</a></li>
-                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">Other Facilities</a></li>
+                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.24×7_emergency_medicine_and_critical_care')}}</a></li>
+                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.24×7_cardiac_care')}}</a></li>
+                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.delivery_packages')}}</a></li>
+                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.health_check-up_packages')}}</a></li>
+                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.health_insurance')}}</a></li>
+                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.nicu')}}</a></li>
+                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.sicu')}}</a></li>
+                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.micu')}}</a></li>
+                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.ccu')}}</a></li>
+                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.other_facilities')}}</a></li>
                     </ul>
                 </div>
             </li>
-            <li><a class="text-gray-700   lg:text-base xl:text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">Doctors</a></li>
+            <li><a class="text-gray-700   lg:text-base xl:text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.doctors')}}</a></li>
             <li x-data="{open : false}"  @mouseleave="open = false">
                 <button @mouseover="open = true" class="text-gray-700   lg:text-base xl:text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer flex flex-row items-center">
-                    <p>Media</p>
+                    <p>{{ __('header.media')}}</p>
                     <x-easyadmin::display.icon icon="icons.chevron_down" height="h-5" width="w-5"/>
                 </button>
                 <div x-show="open" class="absolute h-fit bg-white  border-t-2 border-darkorange  shadow-xl z-20 w-60">
                     <ul class="text-left p-6 flex flex-col gap-3 ltr:text-left rtl:text-right">
-                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">Our Photos</a></li>
-                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">Our Videos</a></li>
+                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.our_photos')}}</a></li>
+                        <li><a class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.our_videos')}}</a></li>
                     </ul>
                 </div>
 
             </li>
-            <li><a class="text-gray-700   lg:text-base xl:text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">Career</a></li>
-            <li><a class="text-gray-700   lg:text-base xl:text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">Contact</a></li>
-            <li><a class="bg-darkorange hover:bg-black  text-white rounded-full font-helvetica lg:text-base xl:text-base  py-3 px-4 shadow-2xl cursor-pointer">Schedule an appointment</a></li> 
+            <li><a class="text-gray-700   lg:text-base xl:text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.career')}}</a></li>
+            <li><a class="text-gray-700   lg:text-base xl:text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.contact')}}</a></li>
+            <li><a class="bg-darkorange hover:bg-black  text-white rounded-full font-helvetica lg:text-base xl:text-base  py-3 px-4 shadow-2xl transition-all duration-700 ease-in-out cursor-pointer">{{ __('header.schedule_an_appointment')}}</a></li> 
         </ul>
 
     </div>

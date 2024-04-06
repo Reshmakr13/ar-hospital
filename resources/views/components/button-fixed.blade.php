@@ -1,4 +1,4 @@
-@props(['href'=> '#','title'=>'Chat Now'])
+@props(['href'=> '#','title'=>''])
 <div class="fixed z-50   bottom-16 w-full ">
     <div class="max-w-screen-xl  ">
         <div class="flex  justify-end   max-w-9/10">
