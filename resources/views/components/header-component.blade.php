@@ -6,9 +6,9 @@
         <x-easyadmin::display.icon icon="icons.menu-bar" height="h-5" width="w-5"/>
         </button>
         <div x-show="open" class="w-screen h-screen  fixed bg-white top-0 left-0 z-50 overflow-y-scroll bg-white/95">
-        <button @click="open = !open" class="flex justify-end w-full py-5 px-4 fill-current text-gray-700">
-        <x-easyadmin::display.icon icon="icons.close-button" height="h-5" width="w-5"/>
-        </button>
+            <button @click="open = !open" class="flex justify-end w-full py-5 px-4 fill-current text-gray-700">
+            <x-easyadmin::display.icon icon="icons.close-button" height="h-5" width="w-5"/>
+            </button>
             <ul class="flex flex-col text-center gap-y-4 mt-8 mb-8">
                 <!-- <div class="flex flex-row justify-center gap-2">
                     <li><button @click="direction = 'ltr'" class="text-base text-gray-700 hover:text-pink-400 cursor-pointer " :class="{' text-pink-700':direction === 'ltr'}">English</button></li>
@@ -128,7 +128,7 @@
                     </div>
                 </li>
                 <li><a href="{{route('webpages.guest.show', ['locale' => app()->currentLocale(), 'slug' => 'doctors'])}}" 
-                    @click.prevent.stop="$dispatch('linkaction', {link: '{{route('webpages.guest.show', ['locale' => app()->currentLocale(), 'slug' => 'doctors'])}}', route: 'webpages.guest.show'})"
+                    @click.prevent.stop="$dispatch('linkaction', {link: '{{route('webpages.guest.show', ['locale' => app()->currentLocale(), 'slug' => 'doctors'])}}'})"
                         class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer">{{ __('header.doctors')}}</a></li>
                 
                         <li x-data="{open : false}" class="flex flex-col  justify-center ">
@@ -149,13 +149,13 @@
                     </div>
                 </li>
                 <li><a href="{{route('webpages.guest.show', ['locale' => app()->currentLocale(), 'slug' => 'careers'])}}" 
-                    @click.prevent.stop="$dispatch('linkaction', {link: '{{route('webpages.guest.show', ['locale' => app()->currentLocale(), 'slug' => 'careers'])}}', route: 'webpages.guest.show'})" 
+                    @click.prevent.stop="$dispatch('linkaction', {link: '{{route('webpages.guest.show', ['locale' => app()->currentLocale(), 'slug' => 'careers'])}}'})" 
                     class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.career')}}</a></li>
                 
-                <li><a href="{{route('contact.guest.show', ['locale' => app()->currentLocale(), 'slug' => 'contacts'])}}" @click.prevent.stop="$dispatch('linkaction', {link: '{{route('contact.guest.show', ['locale' => app()->currentLocale(), 'slug' => 'contacts'])}}', route: 'webpages.guest.show'})" 
+                <li><a href="{{route('contact', )}}" @click.prevent.stop="$dispatch('linkaction', {link: '{{route('contact')}}', route: 'contact'})" 
                 class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.contact')}}</a></li>
                 
-                <li><a href="{{route('booking.guest.show', ['locale' => app()->currentLocale()])}}" @click.prevent.stop="$dispatch('linkaction', {link: '{{route('booking.guest.show', ['locale' => app()->currentLocale()])}}', route: 'booking.guest.show'})"
+                <li><a href="{{route('booking')}}" @click.prevent.stop="$dispatch('linkaction', {link: '{{route('booking' )}}', route: 'booking'})"
                         class="bg-darkorange text-white rounded-full font-helvetica text-base py-3 px-4 shadow-2xl cursor-pointer transition-all duration-700 ease-in-out hover:bg-black">{{ __('header.schedule_an_appointment')}}</a></li>
             </ul>
         </div>
@@ -222,7 +222,7 @@
             </li>
             <li  x-data="{open : false}"  @mouseleave="open = false" >
                 <button @mouseover="open = true" class="text-gray-700   lg:text-base xl:text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer flex flex-row items-center ">
-                    <p>Facilities</p>
+                    <p>{{ __('header.facilities')}}</p>
                     <x-easyadmin::display.icon icon="icons.chevron_down" height="h-5" width="w-5"/>
                 </button>
                 <div x-show="open" class="absolute h-fit bg-white  border-t-2 border-darkorange  shadow-xl z-20 w-60">
@@ -270,7 +270,7 @@
                 </div>
             </li>
             <li><a href="{{route('webpages.guest.show', ['locale' => app()->currentLocale(), 'slug' => 'doctors'])}}" 
-                    @click.prevent.stop="$dispatch('linkaction', {link: '{{route('webpages.guest.show', ['locale' => app()->currentLocale(), 'slug' => 'doctors'])}}', route: 'webpages.guest.show'})"
+                    @click.prevent.stop="$dispatch('linkaction', {link: '{{route('webpages.guest.show', ['locale' => app()->currentLocale(), 'slug' => 'doctors'])}}'})"
                     class="text-gray-700   lg:text-base xl:text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.doctors')}}</a></li>
             
             <li x-data="{open : false}"  @mouseleave="open = false">
@@ -281,24 +281,24 @@
                 <div x-show="open" class="absolute h-fit bg-white  border-t-2 border-darkorange  shadow-xl z-20 w-60">
                     <ul class="text-left p-6 flex flex-col gap-3 ltr:text-left rtl:text-right">
                         <li><a href="{{route('media.guest.show', ['locale' => app()->currentLocale(), 'slug' => 'our-photos'])}}" 
-                    @click.prevent.stop="$dispatch('linkaction', {link: '{{route('media.guest.show', ['locale' => app()->currentLocale(), 'slug' => 'our-photos'])}}', route: 'webpages.guest.show'})"
+                                @click.prevent.stop="$dispatch('linkaction', {link: '{{route('media.guest.show', ['locale' => app()->currentLocale(), 'slug' => 'our-photos'])}}'})"
                                 class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.our_photos')}}</a></li>
                         
                         <li><a href="{{route('media.guest.show', ['locale' => app()->currentLocale(), 'slug' => 'our-videos'])}}"
-                                    @click.prevent.stop="$dispatch('linkaction', {link: '{{route('media.guest.show', ['locale' => app()->currentLocale(), 'slug' => 'our-videos'])}}'})"
+                                @click.prevent.stop="$dispatch('linkaction', {link: '{{route('media.guest.show', ['locale' => app()->currentLocale(), 'slug' => 'our-videos'])}}'})"
                                 class="text-gray-700   text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.our_videos')}}</a></li>
                     </ul>
                 </div>
 
             </li>
             <li><a href="{{route('webpages.guest.show', ['locale' => app()->currentLocale(), 'slug' => 'careers'])}}" 
-                    @click.prevent.stop="$dispatch('linkaction', {link: '{{route('webpages.guest.show', ['locale' => app()->currentLocale(), 'slug' => 'careers'])}}', route: 'webpages.guest.show'})"
+                    @click.prevent.stop="$dispatch('linkaction', {link: '{{route('webpages.guest.show', ['locale' => app()->currentLocale(), 'slug' => 'careers'])}}'})"
                     class="text-gray-700   lg:text-base xl:text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.career')}}</a></li>
             
-            <li><a href="{{route('contact.guest.show', ['locale' => app()->currentLocale(), 'slug' => 'contacts'])}}" @click.prevent.stop="$dispatch('linkaction', {link: '{{route('contact.guest.show', ['locale' => app()->currentLocale(), 'slug' => 'contacts'])}}', route: 'contact.guest.show'})" 
+            <li><a href="{{route('contact')}}" @click.prevent.stop="$dispatch('linkaction', {link: '{{route('contact')}}', route: 'contact'})" 
                     class="text-gray-700   lg:text-base xl:text-base transition-all duration-300 ease-in-out hover:text-darkorange cursor-pointer ">{{ __('header.contact')}}</a></li>
             
-            <li><a href="{{route(booking.guest.show', ['locale' => app()->currentLocale()])}}" @click.prevent.stop="$dispatch('linkaction', {link: '{{route('booking.guest.show', ['locale' => app()->currentLocale())}}', route: 'booking.guest.show'})" 
+            <li><a href="{{route(booking)}}" @click.prevent.stop="$dispatch('linkaction', {link: '{{route('booking' )}}',route:'booking'})" 
                     class="bg-darkorange hover:bg-black  text-white rounded-full font-helvetica lg:text-base xl:text-base  py-3 px-4 shadow-2xl transition-all duration-700 ease-in-out cursor-pointer">{{ __('header.schedule_an_appointment')}}</a></li> 
         </ul>
 
